@@ -19,7 +19,8 @@
 //         this.db = firebase.database();
 
 //         this.googleProvider = new firebase.auth.GoogleAuthProvider();
-//         this.facebookProvider = new firebase.auth.facebookProvider();
+//         // this.facebookProvider = new firebase.auth.facebookProvider();
+//         this.facebookProvider = new firebase.auth.FacebookAuthProvider();
 //     }
 
 //     // *** Auth API ***
@@ -34,9 +35,10 @@
 //         this.auth.signInWithPopup(this.googleProvider);
 
 //     doSignInWithFacebook = () =>
-//         // this.auth.signInWithPopup(this.facebookProvider);
-//         alert('it shows')
+//         this.auth.signInWithPopup(this.facebookProvider);
 
 //     doSignOut = () => this.auth.signOut();
+
+    
 
 // }

@@ -34,6 +34,14 @@ target 'addMi' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKShareKit'
 
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+
+# https://firebase.google.com/docs/ios/setup#available-pods
+
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
+
   target 'addMiTests' do
     inherit! :search_paths
     # Pods for testing

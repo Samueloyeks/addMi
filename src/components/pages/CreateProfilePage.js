@@ -10,10 +10,13 @@ import manualAuth_img from '../../../assets/img/manualAuth.png';
 import google_img from '../../../assets/img/google.png';
 import FBSDK, { LoginManager, AccessToken, LoginButton } from 'react-native-fbsdk';
 // import {FirebaseService} from '../../providers/firebase-service/firebase-service';
-// import firebase from 'firebase';
+import * as firebase from 'react-native-firebase';
+// import * as firebase from 'firebase';
 
 
 export default class CreateProfilePage extends Component {
+
+    
     // async conponentWillMount() {
     //     var config = {
     //         apiKey: "AIzaSyBatsWUoLn6ScgDUzhnuakiVqW_my52ZD4",
@@ -55,11 +58,20 @@ export default class CreateProfilePage extends Component {
 
     async facebookLogin() {
         try {
-            let result = await LoginManager.logInWithPermissions(['public_profile']);
+            let result = await LoginManager.logInWithPermissions(['public_profile','email']);
             if (result.isCancelled) {
                 alert('Login was cancelled')
             } else {
                 alert('login was succesful with permissions: ' + result.grantedPermissions.toString())
+                AccessToken.getCurrentAccessToken()
+                .then((data) => {
+                  const credential = firebase.auth.FacebookAuthProvider.credential(data.accessToken);
+                  firebase.auth().signInWithCredential(credential)
+                    .then((data)=>{alert(JSON.stringify(data))})
+                    .catch((error) => {
+                      loginSingUpFail(dispatch, error.message);
+                    });
+                });
             }
         } catch (err) {
             alert(err)

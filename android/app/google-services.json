@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "918110733571",
+    "firebase_url": "https://addmi-fe3b5.firebaseio.com",
+    "project_id": "addmi-fe3b5",
+    "storage_bucket": "addmi-fe3b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918110733571:android:62cd3ccd5d7759096ad536",
+        "android_client_info": {
+          "package_name": "com.addmi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918110733571-n85hs9mca5fr8m5qcqe0gh0mn1frdlj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJdKH93lwXZGeymgV78jS9_KkXkmgVfxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918110733571-n85hs9mca5fr8m5qcqe0gh0mn1frdlj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

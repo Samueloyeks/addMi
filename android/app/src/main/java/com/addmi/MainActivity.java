@@ -2,6 +2,7 @@ package com.addmi;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.FacebookSdk;
+import io.invertase.firebase.auth.RNFirebaseAuthPackage;
 
 public class MainActivity extends ReactActivity {
 
